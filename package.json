@@ -1,6 +1,6 @@
 {
   "name": "raf-timeout",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "setTimeout using requestAnimationFrame",
   "format": "es6",
   "main": "index.js",
