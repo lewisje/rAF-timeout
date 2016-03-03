@@ -19,7 +19,7 @@ If we make sure to apply this modification first before any other code runs,
 then we can also lock the modified window.setTimeout and window.setInterval
 properties so that other code doesn't redefine setTimeout or setInterval. 
 
-For example, import raf-timeout,
+For example, import raf-timeout in your entry point,
 
 ```js
 import 'raf-timeout' // ES6
@@ -33,7 +33,7 @@ or use the global,
 <script src="/path/to/node_modules/raf-timeout/global.js"></script>
 ```
 
-then
+then lock the properties.
 
 ```js
 Object.defineProperty(window, 'setTimeout', {
