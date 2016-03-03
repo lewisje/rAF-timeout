@@ -1,13 +1,13 @@
-// Import this if you want to polyfill things like Promise, Object.values(),
-// etc. Includes Facebook Regenerator if you're using generators or async
-// functions.
-import 'babel-polyfill'
+~function() {
+    const oldSetTimeout = window.setTimeout
+    // fires the given fn on the nearest following animation frame.
+    window.setTimeout = function(fn, timeout) {
+        oldSetTimeout.call(window, () => requestAnimationFrame(fn), timeout)
+    }
 
-// import from a local file.
-import bar from './foo/bar'
-
-// export the things you want from your package. These become the top-level
-// properties of the object assigned onto `window` in your global build.
-export let something = bar + '!'
-
-console.log(something)
+    const oldSetInterval = window.setInterval
+    // fires the given fn on the nearest following animation frame.
+    window.setInterval = function(fn, interval) {
+        oldSetInterval.call(window, () => requestAnimationFrame(fn), interval)
+    }
+}()

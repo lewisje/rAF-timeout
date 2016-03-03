@@ -1,13 +1,13 @@
 {
-  "name": "npm-package-skeleton",
+  "name": "rAF-timeout",
   "version": "1.0.0",
-  "description": "PUT-YOUR-PACKAGE-DESCRIPTION-HERE",
+  "description": "setTimeout and setInterval re-made with requestAnimationFrame",
   "format": "es6",
   "main": "index.js",
   "browser": "global.js",
   "global": "global.js",
   "license": "MIT",
-  "homepage": "PUT-YOUR-PACKAGE-HOMEPAGE-HERE",
+  "homepage": "https://github.com/trusktr/rAF-timeout",
   "scripts": {
     "test": "./.scripts/test.sh",
     "clean": "./.scripts/clean.sh",
@@ -49,13 +49,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "PUT-YOUR-GIT-REPO-URL-HERE"
+    "url": "https://github.com/trusktr/rAF-timeout"
   },
   "bugs": {
-    "url": "PUT-YOUR-ISSUE-TRACKER-URL-HERE"
+    "url": "https://github.com/trusktr/rAF-timeout/issues"
   },
   "keywords": [
-    "ADD-YOUR-KEYWORDS-HERE"
+    "setTimeout",
+    "setInterval",
+    "requestAnimationFrame"
   ],
   "author": ""
 }
