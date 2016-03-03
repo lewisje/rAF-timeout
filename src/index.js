@@ -1,13 +1,13 @@
 ~function() {
-    const oldSetTimeout = window.setTimeout
-    // fires the given fn on the nearest following animation frame.
-    window.setTimeout = function(fn, timeout) {
-        oldSetTimeout.call(window, () => requestAnimationFrame(fn), timeout)
+    const global = this
+
+    const oldSetTimeout = global.setTimeout
+    global.setTimeout = function(fn, timeout) {
+        oldSetTimeout.call(global, () => requestAnimationFrame(fn), timeout)
     }
 
-    const oldSetInterval = window.setInterval
-    // fires the given fn on the nearest following animation frame.
-    window.setInterval = function(fn, interval) {
-        oldSetInterval.call(window, () => requestAnimationFrame(fn), interval)
+    const oldSetInterval = global.setInterval
+    global.setInterval = function(fn, interval) {
+        oldSetInterval.call(global, () => requestAnimationFrame(fn), interval)
     }
 }()
